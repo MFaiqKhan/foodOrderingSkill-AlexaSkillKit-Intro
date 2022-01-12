@@ -43,13 +43,13 @@ const LaunchRequestHandler = {
       clientName: "saylani class",
     }).save();
 
-    const speakOutput = 'Welcome to kababjees, I am your virtual assistant. you can ask for the menu';
+    const speakOutput = 'Irasshaimase! Welcome to Japanese restaurant, I am your virtual assistant. you can ask for the menu';
     const reprompt = 'I am your virtual assistant. you can ask for the menu';
 
     return handlerInput.responseBuilder
       .speak(speakOutput)
       .reprompt(reprompt)
-      .withSimpleCard("Kababjees", speakOutput)
+      .withSimpleCard("Japanese Restaurant", speakOutput)
       .getResponse();
   }
 };
@@ -59,9 +59,9 @@ const showMenuHandler = {
       && Alexa.getIntentName(handlerInput.requestEnvelope) === 'showMenu';
   },
   handle(handlerInput) {
-    const speakOutput = 'In the menu, we have Beef kabab, Mutton kabab, Chicken Reshmi kabab, Gola kabab and Seekh kabab. which one would you like to order?';
-    const reprompt = 'we have Beef kabab, Mutton kabab, Chicken Reshmi kabab, Gola kabab and Seekh kabab.';
-    const cardText = '1. Beef kabab \n2. Mutton kabab \n3. Chicken Reshmi kabab \n4. Gola kabab \n5. Seekh kabab.';
+    const speakOutput = 'In the menu, we have Sushi & Sashimi, Ramen, Tempura, Kare-Raisu and Okonomiyaki. which one would you like to order?';
+    const reprompt = 'we have Sushi & Sashimi, Ramen, Tempura, Kare-Raisu and Okonomiyaki.';
+    const cardText = '1. Sushi & Sashimi \n2. Ramen \n3. Tempura kabab \n4. Kare-Raisu \n5. Okonomiyaki.';
 
     return handlerInput.responseBuilder
       .speak(speakOutput)
