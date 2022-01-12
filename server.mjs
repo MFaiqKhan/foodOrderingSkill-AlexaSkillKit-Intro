@@ -58,6 +58,7 @@ const showMenuHandler = {
     return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
       && Alexa.getIntentName(handlerInput.requestEnvelope) === 'showMenu';
   },
+  try {
   handle(handlerInput) {
     const speakOutput = 'In the menu, we have Sushi & Sashimi, Ramen, Tempura, Kare-Raisu and Okonomiyaki. which one would you like to order?';
     const reprompt = 'we have Sushi & Sashimi, Ramen, Tempura, Kare-Raisu and Okonomiyaki.';
@@ -70,6 +71,9 @@ const showMenuHandler = {
       .getResponse();
   }
 };
+} catch(error) {
+  console.log("error code: ", error.response.status);
+}
 
 
 const deviceIdHandler = {
