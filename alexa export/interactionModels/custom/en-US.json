@@ -19,11 +19,13 @@
           "name": "showMenu",
           "slots": [],
           "samples": [
-            "what is present in this restaurant",
-            "show me menu pls",
-            "I want to eat",
-            "what is to eat",
-            "show menu"
+            "please show me menu",
+            "what is in menu",
+            "menu",
+            "what do you have",
+            "I am hungry",
+            "say hello world",
+            "say hello"
           ]
         },
         {
@@ -33,10 +35,91 @@
         {
           "name": "AMAZON.FallbackIntent",
           "samples": []
+        },
+        {
+          "name": "EmailIntent",
+          "slots": [],
+          "samples": [
+            "do you know my email",
+            "show my email",
+            "what is my email"
+          ]
+        },
+        {
+          "name": "deviceId",
+          "slots": [],
+          "samples": [
+            "my device id",
+            "show my device id",
+            "what is my device id"
+          ]
         }
       ],
-      "types": []
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "",
+                "synonyms": [
+                  "syrup",
+                  " seal kebab",
+                  "five",
+                  "5",
+                  "sear kebab"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Gola kabab",
+                "synonyms": [
+                  "golla kebab",
+                  "four",
+                  "4",
+                  "gola kebab"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Chicken Reshmi kabab",
+                "synonyms": [
+                  "three",
+                  "3",
+                  "reshmi kebab",
+                  "reshmi",
+                  "chicken",
+                  "chicken reshmi",
+                  "chicken reshmi cabas"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Mutton kabab",
+                "synonyms": [
+                  "two",
+                  "2",
+                  "mutton kebab"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Beef kabab",
+                "synonyms": [
+                  "one",
+                  "1",
+                  "beef kebab"
+                ]
+              }
+            }
+          ],
+          "name": "dishes"
+        }
+      ]
     }
   },
-  "version": "6"
+  "version": "9"
 }
